@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "homeTitle": "Chhab, Wedding Platters & Hampers in Una | Jay Dwarkadhish",
+    "homeDescription": "Handcrafted chhab decoration, wedding and engagement platters, ring plates, gift hampers and baby shower items in Una, Gujarat. Custom orders on WhatsApp.",
+    "aboutTitle": "About Us | Jay Dwarkadhish Platters & Decor, Una",
+    "aboutDescription": "Meet Jay Dwarkadhish Platters & Decor, a home studio in Una, Gujarat making handcrafted chhab, platters and hampers for weddings, engagements and festivals.",
+    "contactTitle": "Contact & Custom Orders | Jay Dwarkadhish, Una",
+    "contactDescription": "Call or WhatsApp +91 70465 37191 to order custom chhab, wedding platters and gift hampers in Una, Gujarat."
+  },
+  "nav": {
+    "home": "Home",
+    "work": "Our Work",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "skip": "Skip to content",
+    "mainNav": "Main navigation"
+  },
+  "hero": {
+    "eyebrow": "Una, Gujarat",
+    "title": "Handcrafted platters for life's most special moments",
+    "subtitle": "Chhab, wedding and engagement platters, hampers and more, made by hand and designed around your colours and your ceremony.",
+    "ctaPrimary": "Order on WhatsApp",
+    "ctaSecondary": "Browse our work"
+  },
+  "home": {
+    "categoriesTitle": "What we make",
+    "categoriesSubtitle": "Every piece is customised. Pick a category to see our work.",
+    "featuredTitle": "Recent work",
+    "featuredSubtitle": "A few favourites. Tap any photo to see it larger.",
+    "viewAll": "View all",
+    "customTitle": "Something in mind?",
+    "customBody": "All of our pieces are made to order. Tell us your colours, occasion and date, and we will take it from there."
+  },
+  "about": {
+    "title": "About us",
+    "lead": "Jay Dwarkadhish Platters & Decor is a home studio in Una, Gujarat, run by {owner}.",
+    "body1": "We make handcrafted chhab, platters and hampers for the moments families remember: engagements, weddings, haldi, baby showers and festivals.",
+    "body2": "Each piece is designed around your colours, your ceremony and your family's traditions, and made by hand with attention to every detail.",
+    "highlightsTitle": "What to expect",
+    "highlights": [
+      "Handmade with love and detail",
+      "Colours and designs customised to you",
+      "For weddings, engagements, baby showers and festivals",
+      "Order simply by call or WhatsApp"
+    ]
+  },
+  "contact": {
+    "title": "Contact & custom orders",
+    "intro": "The quickest way to order is to message us on WhatsApp with your occasion, colours and date. You can also call us.",
+    "call": "Call us",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "visit": "Visit us",
+    "openMap": "Open in Google Maps",
+    "hours": "Opening hours",
+    "customOrdersNote": "All items are made to order. Please contact us in good time for your date.",
+    "days": {
+      "Monday": "Monday",
+      "Tuesday": "Tuesday",
+      "Wednesday": "Wednesday",
+      "Thursday": "Thursday",
+      "Friday": "Friday",
+      "Saturday": "Saturday",
+      "Sunday": "Sunday"
+    }
+  },
+  "gallery": {
+    "enquire": "Enquire on WhatsApp",
+    "close": "Close",
+    "next": "Next photo",
+    "previous": "Previous photo",
+    "open": "View larger",
+    "counter": "{current} of {total}",
+    "empty": "Photos for this category are coming soon. Message us to see our latest work."
+  },
+  "category": {
+    "home": "Home",
+    "otherTitle": "More from our work",
+    "ctaTitle": "Like what you see?",
+    "ctaBody": "Tell us what you need and we will make it your way.",
+    "ctaButton": "Ask about {name}"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "customOrders": "Custom orders by call or WhatsApp",
+    "categories": "Our work",
+    "contact": "Contact",
+    "follow": "Follow us"
+  },
+  "whatsapp": {
+    "generic": "Hi! I'd like to know more about your platters and decorations.",
+    "category": "Hi! I'm interested in {name}. Could you share more details?",
+    "product": "Hi! I'm interested in \"{name}\" ({category}). Could you share more details?",
+    "floatingLabel": "Chat on WhatsApp"
+  },
+  "switcher": {
+    "label": "Language"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "We couldn't find that page. Try our home page or message us on WhatsApp.",
+    "home": "Back to home"
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "sample-design-1",
+    "name": {
+      "en": "Sample design 1",
+      "hi": "नमूना डिज़ाइन 1",
+      "gu": "નમૂનો ડિઝાઇન 1"
+    },
+    "description": {
+      "en": "Placeholder entry. Replace it with a real product in content/products/haldi-mehendi.json."
+    },
+    "images": [
+      {
+        "src": "sample-1.webp",
+        "alt": {
+          "en": "Placeholder image for Haldi & mehendi sample design 1",
+          "hi": "Haldi & mehendi नमूना डिज़ाइन 1 के लिए प्लेसहोल्डर चित्र",
+          "gu": "Haldi & mehendi નમૂના ડિઝાઇન 1 માટે પ્લેસહોલ્ડર ચિત્ર"
+        }
+      }
+    ],
+    "tags": [
+      "sample"
+    ],
+    "featured": true,
+    "published": true
+  },
+  {
+    "slug": "sample-design-2",
+    "name": {
+      "en": "Sample design 2",
+      "hi": "नमूना डिज़ाइन 2",
+      "gu": "નમૂનો ડિઝાઇન 2"
+    },
+    "description": {
+      "en": "Placeholder entry. Replace it with a real product in content/products/haldi-mehendi.json."
+    },
+    "images": [
+      {
+        "src": "sample-2.webp",
+        "alt": {
+          "en": "Placeholder image for Haldi & mehendi sample design 2",
+          "hi": "Haldi & mehendi नमूना डिज़ाइन 2 के लिए प्लेसहोल्डर चित्र",
+          "gu": "Haldi & mehendi નમૂના ડિઝાઇન 2 માટે પ્લેસહોલ્ડર ચિત્ર"
+        }
+      }
+    ],
+    "tags": [
+      "sample"
+    ],
+    "featured": false,
+    "published": true
+  },
+  {
+    "slug": "sample-design-3",
+    "name": {
+      "en": "Sample design 3",
+      "hi": "नमूना डिज़ाइन 3",
+      "gu": "નમૂનો ડિઝાઇન 3"
+    },
+    "description": {
+      "en": "Placeholder entry. Replace it with a real product in content/products/haldi-mehendi.json."
+    },
+    "images": [
+      {
+        "src": "sample-3.webp",
+        "alt": {
+          "en": "Placeholder image for Haldi & mehendi sample design 3",
+          "hi": "Haldi & mehendi नमूना डिज़ाइन 3 के लिए प्लेसहोल्डर चित्र",
+          "gu": "Haldi & mehendi નમૂના ડિઝાઇન 3 માટે પ્લેસહોલ્ડર ચિત્ર"
+        }
+      }
+    ],
+    "tags": [
+      "sample"
+    ],
+    "featured": false,
+    "published": true
+  }
+]

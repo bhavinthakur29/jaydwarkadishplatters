@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Self-hosted fonts (no third-party requests). Subsets use unicode-range, so
+   Gujarati/Devanagari files are only downloaded when those scripts are on the page. */
+@import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/noto-sans-devanagari";
+@import "@fontsource-variable/noto-serif-devanagari";
+@import "@fontsource-variable/noto-sans-gujarati";
+@import "@fontsource-variable/noto-serif-gujarati";
+
+/* Brand palette, taken from the Jay Dwarkadhish Platters logo and poster:
+   royal navy, antique gold, cream, with a rose/peacock accent. */
+@theme inline {
+  --color-cream: #fbf5e6;
+  --color-ivory: #fffaf0;
+  --color-sand: #f0e4c8;
+  --color-navy: #16246b;
+  --color-navy-deep: #0d1646;
+  --color-navy-soft: #2a3c94;
+  --color-gold: #c8a24a;
+  --color-gold-soft: #e8d49a;
+  --color-gold-dark: #8a6a1f;
+  --color-rose: #c93d73;
+  --color-blush: #f6dbe3;
+  --color-peacock: #17807d;
+
+  --font-display: var(--ff-display);
+  --font-body: var(--ff-body);
+}
+
+/* Per-language font stacks. <html lang> is set in the [lang] layout. */
+:root {
+  --ff-display: "Playfair Display Variable", Georgia, serif;
+  --ff-body: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+html[lang="hi"] {
+  --ff-display: "Noto Serif Devanagari Variable", "Playfair Display Variable", serif;
+  --ff-body: "Noto Sans Devanagari Variable", "Inter Variable", system-ui, sans-serif;
+}
+html[lang="gu"] {
+  --ff-display: "Noto Serif Gujarati Variable", "Playfair Display Variable", serif;
+  --ff-body: "Noto Sans Gujarati Variable", "Inter Variable", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-navy-deep);
+  font-family: var(--ff-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Indic scripts need more generous line height than Latin. */
+html[lang="hi"] body,
+html[lang="gu"] body {
+  line-height: 1.75;
+}
+html[lang="hi"] h1,
+html[lang="hi"] h2,
+html[lang="hi"] h3,
+html[lang="gu"] h1,
+html[lang="gu"] h2,
+html[lang="gu"] h3 {
+  line-height: 1.35;
+}
+
+::selection {
+  background: var(--color-gold-soft);
+  color: var(--color-navy-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Subtle woven pattern used on navy sections. */
+.pattern-navy {
+  background-color: var(--color-navy);
+  background-image:
+    radial-gradient(circle at 20% 10%, rgb(200 162 74 / 0.18), transparent 45%),
+    radial-gradient(circle at 90% 80%, rgb(201 61 115 / 0.16), transparent 40%),
+    radial-gradient(rgb(232 212 154 / 0.14) 1px, transparent 1.2px);
+  background-size: auto, auto, 22px 22px;
+}
+
+dialog::backdrop {
+  background: rgb(13 22 70 / 0.88);
+}
+
+/* Letter-spacing and forced uppercase break Indic conjuncts; neutralise them for hi/gu. */
+html[lang="hi"] *,
+html[lang="gu"] * {
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}

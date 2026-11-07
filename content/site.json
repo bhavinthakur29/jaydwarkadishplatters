@@ -1,0 +1,58 @@
+{
+  "name": {
+    "en": "Jay Dwarkadhish Platters & Decor",
+    "hi": "जय द्वारकाधीश प्लैटर्स एंड डेकोर",
+    "gu": "જય દ્વારકાધીશ પ્લેટર્સ & ડેકોર"
+  },
+  "shortName": {
+    "en": "Jay Dwarkadhish",
+    "hi": "जय द्वारकाधीश",
+    "gu": "જય દ્વારકાધીશ"
+  },
+  "tagline": {
+    "en": "Handcrafted chhab, wedding platters & gift hampers",
+    "hi": "हाथ से बने छाब, वेडिंग प्लैटर्स और गिफ्ट हैम्पर्स",
+    "gu": "હાથે બનાવેલા છાબ, વેડિંગ પ્લેટર્સ અને ગિફ્ટ હેમ્પર્સ"
+  },
+  "owner": {
+    "en": "Urvisha Bambhaniya",
+    "hi": "उर्विशा भांभणिया",
+    "gu": "ઉર્વિશા બાંભણિયા"
+  },
+  "url": "https://dwarkadhish.tekbiz.dev",
+  "logo": "/brand/logo.svg",
+  "ogImage": "/brand/og.png",
+  "phone": {
+    "display": "+91 70465 37191",
+    "e164": "+917046537191",
+    "whatsapp": "917046537191"
+  },
+  "address": {
+    "street": {
+      "en": "Golden City-3, Bhagavan Nivas",
+      "hi": "गोल्डन सिटी-3, भगवान निवास",
+      "gu": "ગોલ્ડન સિટી-3, ભગવાન નિવાસ"
+    },
+    "locality": {
+      "en": "Una",
+      "hi": "ऊना",
+      "gu": "ઊના"
+    },
+    "region": {
+      "en": "Gujarat",
+      "hi": "गुजरात",
+      "gu": "ગુજરાત"
+    },
+    "postalCode": "362560",
+    "country": "IN"
+  },
+  "hours": [],
+  "areaServed": ["Una"],
+  "social": {
+    "instagram": "https://www.instagram.com/jaydwarkadishplatters_decorx/",
+    "instagramHandle": "@jaydwarkadishplatters_decorx"
+  },
+  "map": {
+    "url": "https://maps.app.goo.gl/QwCF7FuyPGYKim2K6"
+  }
+}
