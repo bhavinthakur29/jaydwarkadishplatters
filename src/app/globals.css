@@ -34,10 +34,12 @@
   --ff-display: "Playfair Display Variable", Georgia, serif;
   --ff-body: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
+
 html[lang="hi"] {
   --ff-display: "Noto Serif Devanagari Variable", "Playfair Display Variable", serif;
   --ff-body: "Noto Sans Devanagari Variable", "Inter Variable", system-ui, sans-serif;
 }
+
 html[lang="gu"] {
   --ff-display: "Noto Serif Gujarati Variable", "Playfair Display Variable", serif;
   --ff-body: "Noto Sans Gujarati Variable", "Inter Variable", system-ui, sans-serif;
@@ -60,6 +62,7 @@ html[lang="hi"] body,
 html[lang="gu"] body {
   line-height: 1.75;
 }
+
 html[lang="hi"] h1,
 html[lang="hi"] h2,
 html[lang="hi"] h3,
@@ -83,8 +86,10 @@ html[lang="gu"] h3 {
   html {
     scroll-behavior: auto;
   }
+
   * {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
@@ -108,4 +113,75 @@ html[lang="hi"] *,
 html[lang="gu"] * {
   letter-spacing: normal !important;
   text-transform: none !important;
+}
+
+/* ---------- Motion ---------- */
+/* Entrance animation for above-the-fold content. Pure CSS, so it runs before JavaScript loads. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: var(--d, 0ms);
+  /* Own GPU layer: the rounded, clipped photo is painted once and then just moved,
+     with sub-pixel positioning, instead of being re-painted and snapped to whole pixels. */
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Lightbox open */
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+dialog[open] {
+  animation: dialog-in 0.25s ease-out;
+}
+
+dialog[open]::backdrop {
+  animation: fade-in 0.25s ease-out;
 }

@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { Header } from "@/components/layout/Header";
 import { getSite, localize } from "@/lib/content";
+import { MotionProvider, ScrollProgress } from "@/components/ui/Motion";
 import { isLocale, locales } from "@/lib/i18n";
 import { getMessages } from "@/lib/messages";
 import { siteUrl } from "@/lib/seo";
@@ -43,6 +44,12 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang={lang}>
       <body className="flex min-h-dvh flex-col">
+        {/* If JavaScript is off, never leave scroll-reveal content hidden. */}
+        <noscript>
+          <style>{`[style*="opacity:0"]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+        <MotionProvider>
+        <ScrollProgress />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-full focus:bg-gold focus:px-4 focus:py-2 focus:text-navy-deep"
@@ -55,6 +62,7 @@ export default async function RootLayout({ children, params }: Props) {
         </main>
         <Footer locale={lang} messages={messages} />
         <FloatingWhatsApp messages={messages} />
+        </MotionProvider>
       </body>
     </html>
   );

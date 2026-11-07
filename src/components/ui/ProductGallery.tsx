@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { fill } from "@/lib/i18n";
+import { RevealItem } from "./Motion";
 import { ChevronLeftIcon, ChevronRightIcon, CloseIcon, WhatsAppIcon } from "./icons";
 
 export type GalleryItem = {
@@ -60,7 +61,7 @@ export function ProductGallery({ items, labels, priorityCount = 0 }: Props) {
     <>
       <ul className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
         {items.map((item, index) => (
-          <li key={item.id}>
+          <RevealItem key={item.id} index={index} eager={index < priorityCount}>
             <button
               type="button"
               onClick={(e) => {
@@ -87,7 +88,7 @@ export function ProductGallery({ items, labels, priorityCount = 0 }: Props) {
                 <span className="block text-xs text-gold-dark">{item.category}</span>
               )}
             </button>
-          </li>
+          </RevealItem>
         ))}
       </ul>
 

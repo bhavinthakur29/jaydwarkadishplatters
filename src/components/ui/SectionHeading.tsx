@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Reveal } from "./Motion";
 
 type Props = {
   title: string;
@@ -32,8 +33,9 @@ export function SectionHeading({
   children,
 }: Props) {
   const center = align === "center";
-  return (
-    <div className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+  const wrapperClass = center ? "mx-auto max-w-2xl text-center" : "max-w-2xl";
+  const body = (
+    <>
       {eyebrow && (
         <p
           className={`mb-3 text-xs font-semibold uppercase tracking-[0.22em] ${
@@ -61,6 +63,12 @@ export function SectionHeading({
         </p>
       )}
       {children}
-    </div>
+    </>
+  );
+  // The page's main heading is at the top of the screen: animate it with CSS so it never waits for JS.
+  return Tag === "h1" ? (
+    <div className={`rise ${wrapperClass}`}>{body}</div>
+  ) : (
+    <Reveal className={wrapperClass}>{body}</Reveal>
   );
 }

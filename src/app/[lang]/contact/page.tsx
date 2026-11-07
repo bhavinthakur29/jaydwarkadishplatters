@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/ui/Button";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { Reveal } from "@/components/ui/Motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   ClockIcon,
@@ -53,7 +54,7 @@ export default async function ContactPage({ params }: Props) {
       <JsonLd data={localBusinessJsonLd(lang, messages.meta.contactDescription)} />
       <SectionHeading as="h1" title={messages.contact.title} subtitle={messages.contact.intro} />
 
-      <div className="mt-12 grid gap-5 sm:grid-cols-2">
+      <Reveal className="mt-12 grid gap-5 sm:grid-cols-2">
         <div className={card}>
           <h2 className={cardTitle}>
             <WhatsAppIcon className="text-[#128c4a]" /> {messages.contact.whatsapp}
@@ -99,7 +100,7 @@ export default async function ContactPage({ params }: Props) {
             {messages.contact.instagram}
           </ButtonLink>
         </div>
-      </div>
+      </Reveal>
 
       {site.hours.length > 0 && (
         <div className={`${card} mt-5`}>

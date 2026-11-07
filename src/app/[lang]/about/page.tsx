@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { Reveal, RevealItem } from "@/components/ui/Motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getSite, localize } from "@/lib/content";
 import { fill, isLocale } from "@/lib/i18n";
@@ -31,26 +32,27 @@ export default async function AboutPage({ params }: Props) {
     <>
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
         <SectionHeading as="h1" title={messages.about.title} />
-        <div className="mt-10 space-y-5 text-lg text-navy-deep/85">
+        <Reveal className="mt-10 space-y-5 text-lg text-navy-deep/85">
           <p className="font-display text-2xl leading-snug text-navy">
             {fill(messages.about.lead, { owner: localize(site.owner, lang) })}
           </p>
           <p>{messages.about.body1}</p>
           <p>{messages.about.body2}</p>
-        </div>
+        </Reveal>
 
         <h2 className="mt-14 font-display text-2xl font-semibold text-navy">
           {messages.about.highlightsTitle}
         </h2>
         <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-          {messages.about.highlights.map((item) => (
-            <li
+          {messages.about.highlights.map((item, index) => (
+            <RevealItem
               key={item}
+              index={index}
               className="flex items-start gap-3 rounded-2xl border border-gold/40 bg-ivory p-4 text-navy-deep/85"
             >
               <span className="mt-2 size-2 shrink-0 rotate-45 bg-gold" aria-hidden />
               {item}
-            </li>
+            </RevealItem>
           ))}
         </ul>
       </section>
